@@ -21,13 +21,13 @@ timezone: Euro/Istanbul
 
 title: Semih Berkay Öztürk                       # the main title
 
-tagline: I share tech stuff   # it will display as the sub-title
+tagline: Documenting my discoveries in the IT world    # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://semihberkayozturk.github.io'
 
 github:
   username: semihberkayozturk            # change to your github username
@@ -39,7 +39,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Semih Berkay Öztürk
-  email: example@domain.com             # change to your email address
+  email: example@deneme.com
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/bbsemihh      # change to your twitter homepage
