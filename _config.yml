@@ -39,7 +39,6 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Semih Berkay Öztürk
-  email: example@deneme.com
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/bbsemihh      # change to your twitter homepage
@@ -79,7 +78,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://pbs.twimg.com/profile_images/1611080299768602631/ril1Ho26_400x400.jpg 
+avatar: https://media.licdn.com/dms/image/D4D03AQFl3YotX_6q2g/profile-displayphoto-shrink_800_800/0/1671281721286?e=1679529600&v=beta&t=TydWuXwsZUeT0arwGX6P8VdkaWJ4IkneiSgwlGqvX2c
 
 # boolean type, the global switch for ToC in posts.
 toc: true
