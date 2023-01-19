@@ -1,8 +1,8 @@
 ---
 title: Testing Asynchronous Code Using Vitest
-date: 2023-01-19 19:05:00 +0800
+date: 2023-01-19 19:25:00 +0800
 categories: [test, javascript, vitest]
-tags: [test, software, javascript]
+tags: [test, software, javascript, vitest]
 ---
 
 In this blog post, I'll be explaining how we can implement unit tests for async JavaScript code using [Vitest](https://github.com/vitest-dev/vitest). In the example code, we will generate JSON Web Token to understand the logic behind the async testing easier. Note that since there are no major differences between Jest and Vitest, you can also use Jest to perform the same action.
