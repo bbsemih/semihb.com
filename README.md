@@ -2,6 +2,7 @@
 
 ## License
 
+
 This work is published under [MIT][mit] License
 
 [gem]: https://rubygems.org/gems/jekyll-theme-chirpy
