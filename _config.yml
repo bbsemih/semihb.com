@@ -21,7 +21,7 @@ timezone: Euro/Istanbul
 
 title: Semih Berkay Öztürk                       # the main title
 
-tagline: Documenting my discoveries in the IT world    # it will display as the sub-title
+tagline: Documenting my discoveries in the technology world.  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
