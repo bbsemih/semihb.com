@@ -3,9 +3,13 @@ icon: fas fa-info-circle
 order: 1
 ---
 
-I'm a first year MIS student at Istanbul Bilgi University and a Student Expert at Postman who is trying to help and learn from folks in the community.
+As an freshman MIS student interested in backend engineering, I'm currently using technologies like PostgreSQL, Node.js, TypeScript, MongoDB, Redis, Docker, gRPC ,Protocol Buffers and Postman.
 
-Nowadays, I'm working on Back-end development, creating open source projects and writing blog posts about the technologies I learn and use. You can read my blog posts on semihberkayozturk.github.io and find all of my projects on [GitHub](https://github.com/semihberkayozturk).
+Nowadays I'm eager to learn more about microservices architecture and the Golang to design more efficient and resilient backend systems. Additionally, I enjoy solving algorithm questions, which helps me improve my critical thinking and problem-solving skills.
+
+I'm still a Student Expert in the Postman Student Community, where I continue to learn and help others with their API-related questions and challenges.
+
+You can find all of my projects on [GitHub](https://github.com/bbsemih).
 
 # Contact
 

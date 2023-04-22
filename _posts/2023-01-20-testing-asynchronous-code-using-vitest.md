@@ -1,6 +1,6 @@
 ---
 title: Testing Asynchronous Code Using Vitest
-date: 2023-01-19 20:25:00 +0800
+date: 2023-01-20 00:25:00 +0800
 categories: [test, javascript, vitest]
 tags: [test, software, javascript, vitest]
 ---

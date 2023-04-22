@@ -7,4 +7,4 @@ I'll be posting about books here.
 
 ## Currently Reading
 * The Singularity Is Near - Ray Kurzweil
-* Street Coder - Sedat Kapanoglu
+* Meditations - Marcus Aurelius
