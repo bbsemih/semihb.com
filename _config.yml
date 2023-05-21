@@ -57,14 +57,6 @@ google_analytics:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
     cache_path:       # the local PV cache data, friendly to visitors from GFW region
 
-# Prefer color scheme setting.
-#
-# Note: Keep empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark and light
-# on the bottom left of the sidebar.
-#
-# Available options:
-#
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
@@ -78,7 +70,7 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://media.licdn.com/dms/image/D4D03AQEi-mVWXfPMTw/profile-displayphoto-shrink_200_200/0/1684272357129?e=1689811200&v=beta&t=PSNk0qD-pPCMBAJ1evLhNnRfFsKexMzyekogLuc7qOQ
+avatar: https://media.licdn.com/dms/image/D4D03AQHh1Up0gHU6tw/profile-displayphoto-shrink_400_400/0/1684690382161?e=1690416000&v=beta&t=DUe7fHq1z7RMoZ7BMyW7z0kqNeorWEzydcx13kHIjJE
 
 # boolean type, the global switch for ToC in posts.
 toc: true
