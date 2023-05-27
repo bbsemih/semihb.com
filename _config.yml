@@ -57,10 +57,8 @@ google_analytics:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
     cache_path:       # the local PV cache data, friendly to visitors from GFW region
 
-#     light  - Use the light color scheme
-#     dark   - Use the dark color scheme
-#
-theme_mode:   # [light|dark]
+#to enable switching, leave this empty.
+theme_mode: dark  # [light|dark]
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
@@ -70,23 +68,17 @@ theme_mode:   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://media.licdn.com/dms/image/D4D03AQHh1Up0gHU6tw/profile-displayphoto-shrink_400_400/0/1684690382161?e=1690416000&v=beta&t=DUe7fHq1z7RMoZ7BMyW7z0kqNeorWEzydcx13kHIjJE
+avatar: https://media.licdn.com/dms/image/D4D03AQE5jI_0-DJXyA/profile-displayphoto-shrink_400_400/0/1685095417593?e=1690416000&v=beta&t=T716HxkLZANRdDOhYEUgz4ARN8ElcbxNeJZwEvUt3lk
 
 # boolean type, the global switch for ToC in posts.
 toc: true
 
 comments:
-  active:         # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  active: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
-  disqus:
-    shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
-  utterances:
-    repo:         # <gh-username>/<repo>
-    issue_term:   # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo:              # <gh-username>/<repo>
+    repo: bbsemih/bbsemih.github.io         # <gh-username>/<repo>
     repo_id:
     category:
     category_id:
