@@ -51,7 +51,7 @@ google_site_verification:               # fill in to your verification string
 # The end of `jekyll-seo-tag` settings
 
 google_analytics:
-  id:                 # fill in your Google Analytics ID
+  id: G-J4R0X4NPN5             # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
@@ -75,12 +75,11 @@ toc: true
 
 comments:
   active: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  # The active options are as follows:
   # Giscus options › https://giscus.app
   giscus:
     repo: bbsemih/bbsemih.github.io         # <gh-username>/<repo>
-    repo_id:
-    category:
+    repo_id: 589532203
+    category: Comments
     category_id:
     mapping:           # optional, default to 'pathname'
     input_position:    # optional, default to 'bottom'
