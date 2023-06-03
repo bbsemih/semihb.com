@@ -3,7 +3,7 @@ icon: fas fa-info-circle
 order: 1
 ---
 
-As an freshman MIS student interested in backend engineering, I'm currently using technologies like PostgreSQL, Node.js, TypeScript, MongoDB, Redis, Docker, gRPC ,Protocol Buffers and Postman.
+I'm interested in backend engineering, and currently using technologies like PostgreSQL, Node.js, TypeScript, MongoDB, Redis, Docker, gRPC ,Protocol Buffers and Postman.
 
 Nowadays I'm eager to learn more about microservices architecture and the Golang to design more efficient and resilient backend systems. Additionally, I enjoy solving algorithm questions, which helps me improve my critical thinking and problem-solving skills.
 
