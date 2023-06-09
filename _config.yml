@@ -68,7 +68,8 @@ theme_mode: dark  # [light|dark]
 img_cdn: https://media.licdn.com/dms/image/D4D03AQHm27Z2ozI8aA/profile-displayphoto-shrink_400_400/0/1685706827226?e=1691020800&v=beta&t=cU2SUcK2L9jz-Am7WoJp7_jp8YicXnZsCovIO1K_EMs
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://media.licdn.com/dms/image/D4D03AQHm27Z2ozI8aA/profile-displayphoto-shrink_400_400/0/1685706827226?e=1691020800&v=beta&t=cU2SUcK2L9jz-Am7WoJp7_jp8YicXnZsCovIO1K_EMs
+
+avatar: https://media.licdn.com/dms/image/D4D03AQHWc83hfvGnng/profile-displayphoto-shrink_200_200/0/1686319476416?e=1691625600&v=beta&t=m9tVFDMIfQfjc37VFAwWXBHVaPxcVl5o_WinIjzcDmI
 
 # boolean type, the global switch for ToC in posts.
 toc: true
@@ -77,8 +78,8 @@ comments:
   active: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # Giscus options › https://giscus.app
   giscus:
-    repo: bbsemih/bbsemih.github.io         # <gh-username>/<repo>
-    repo_id: 589532203
+    repo: bbsemih/semihb.com         # <gh-username>/<repo>
+    repo_id: 58953220
     category: Comments
     category_id:
     mapping:           # optional, default to 'pathname'
