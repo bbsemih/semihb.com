@@ -1,5 +1,5 @@
 ---
-title: AWS Cloud Practitioner Chronicles - Week 1
+title: AWS Cloud Practitioner Chronicles - The Infrastructure
 date: 2023-04-28 22:55:00 +0800
 categories: [aws, cloud computing]
 tags: [aws, cloud computing, aws cloud practitioner]

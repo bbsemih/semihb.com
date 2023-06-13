@@ -1,5 +1,5 @@
 ---
-title: AWS Cloud Practitioner Chronicles - Week 2
+title: AWS Cloud Practitioner Chronicles - Identity Access Management (IAM)
 date: 2023-05-07 21:55:00 +0800
 categories: [aws, cloud computing]
 tags: [aws, cloud computing, aws cloud practitioner]

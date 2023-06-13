@@ -21,7 +21,7 @@ timezone: Euro/Istanbul
 
 title: Semih Berkay Öztürk                       # the main title
 
-tagline: Documenting my discoveries in the technology world.  # it will display as the sub-title
+tagline: A place where I share what I find interesting enough to write  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
@@ -78,8 +78,8 @@ comments:
   active: giscus # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # Giscus options › https://giscus.app
   giscus:
-    repo: bbsemih/semihb.com         # <gh-username>/<repo>
-    repo_id: 58953220
+    repo: bbsemih/semihb.com 
+    repo_id: 589532203
     category: Comments
     category_id:
     mapping:           # optional, default to 'pathname'
