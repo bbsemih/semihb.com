@@ -26,14 +26,13 @@ tagline: A place where I share what I find interesting enough to write  # it wil
 description: >-                        # used by seo meta and the atom feed
   A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
 
-# fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://bbsemih.github.io'
+url: 'https://semihb.com'
 
 github:
-  username: bbsemih            # change to your github username
+  username: bbsemih            
 
 twitter:
-  username: bbsemihh           # change to your twitter username
+  username: bbsemihh  
 
 social:
   # Change to your full name.
@@ -69,7 +68,7 @@ img_cdn: https://media.licdn.com/dms/image/D4D03AQHm27Z2ozI8aA/profile-displayph
 
 # the avatar on sidebar, support local or CORS resources
 
-avatar: https://media.licdn.com/dms/image/D4D03AQHWc83hfvGnng/profile-displayphoto-shrink_200_200/0/1686319476416?e=1691625600&v=beta&t=m9tVFDMIfQfjc37VFAwWXBHVaPxcVl5o_WinIjzcDmI
+avatar: https://media.licdn.com/dms/image/D4D03AQGkdAASgtrCtw/profile-displayphoto-shrink_400_400/0/1688327173674?e=1694044800&v=beta&t=sTC0UPtTLChTh4Pd7UO2k1EwxHdG8tkNe7tkbJgLiLk
 
 # boolean type, the global switch for ToC in posts.
 toc: true
@@ -104,7 +103,7 @@ paginate: 10
 
 kramdown:
   syntax_highlighter: rouge
-  syntax_highlighter_opts:   # Rouge Options › https://github.com/jneen/rouge#full-options
+  syntax_highlighter_opts:
     css_class: highlight
     # default_lang: console
     span:

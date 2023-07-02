@@ -9,7 +9,7 @@ order: 5
 
 - [ ] [ Deployment Archetypes for Cloud Applications](https://arxiv.org/abs/2105.00560v1)
 
-- [ ] [ How Discord Stores Trilions of Messages?](https://discord.com/blog/how-discord-stores-trillions-of-messages)
+- [x] [ How Discord Stores Trilions of Messages?](https://discord.com/blog/how-discord-stores-trillions-of-messages)
 
 - [ ] [ How Does Database Sharding Works? - Planetscale](https://planetscale.com/blog/how-does-database-sharding-work)
 
