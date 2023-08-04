@@ -50,4 +50,4 @@ To give an example, if we're in Turkey, then when we try to access a video that'
 
 The shared responsibility model is a concept in cloud computing that outlines the responsibilities of both the cloud provider and the customer for securing and managing the cloud environment. This image is from AWS' website and it clearly specifies the responsibilites.
 
-The AWS is responsible for the security and maintenance of the underlying cloud infrastructure, while the customer is responsible for securing and managing their own applications, data, and access to the cloud resources they use.
+The AWS is responsible for the security and maintenance of the underlying cloud infrastructure while the customer is responsible for securing and managing their own applications, data, and access to the cloud resources they use.
