@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="To help me stay on track and document my progress during my preparation for AWS Cloud Practitioner certification, I’ve decided to start a blog post series where I will share my experiences. By doing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AWS Cloud Practitioner Chronicles - The Infrastructure">
+<meta property="og:url" content="http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/index.html">
+<meta property="og:site_name" content="semih berkay öztürk">
+<meta property="og:description" content="To help me stay on track and document my progress during my preparation for AWS Cloud Practitioner certification, I’ve decided to start a blog post series where I will share my experiences. By doing">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://allcode.com/wp-content/uploads/2021/02/Group-169-3.png">
+<meta property="og:image" content="https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2022/03/23/infografi%CC%81a-aws-local-zones-english-map-1080.png">
+<meta property="og:image" content="https://digitalcloud.training/wp-content/uploads/2022/02/aws-cloudfront-edge-cache.png">
+<meta property="og:image" content="https://d1.awsstatic.com/security-center/Shared_Responsibility_Model_V2.59d1eccec334b366627e9295b304202faf7b899b.jpg">
+<meta property="article:published_time" content="2023-04-28T14:55:00.000Z">
+<meta property="article:modified_time" content="2023-08-04T09:35:22.433Z">
+<meta property="article:tag" content="aws">
+<meta property="article:tag" content="cloud computing">
+<meta property="article:tag" content="aws cloud practitioner">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://allcode.com/wp-content/uploads/2021/02/Group-169-3.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/s.png">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon.ico" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+        
+      
+    
+    <!-- title -->
+    <title>AWS Cloud Practitioner Chronicles - The Infrastructure</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/bbsemih">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2023/05/07/AWS-Cloud-Practitioner-Chronicles-Identity-Access-Management-IAM/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2023/04/22/Essentials-of-Transactions-in-PostgreSQL/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&text=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&title=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&is_video=false&description=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=AWS Cloud Practitioner Chronicles - The Infrastructure&body=Check out this article: http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&title=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&title=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&title=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&title=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&name=AWS Cloud Practitioner Chronicles - The Infrastructure&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&t=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-AWS-Global-Infrastructure"><span class="toc-number">1.</span> <span class="toc-text">The AWS Global Infrastructure</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Local-Zones"><span class="toc-number">1.1.</span> <span class="toc-text">Local Zones</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Wavelength-Zones"><span class="toc-number">1.2.</span> <span class="toc-text">Wavelength Zones</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Outposts"><span class="toc-number">1.3.</span> <span class="toc-text">Outposts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cloudfront"><span class="toc-number">1.4.</span> <span class="toc-text">Cloudfront</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-AWS-Shared-Responsibility-Model"><span class="toc-number">2.</span> <span class="toc-text">The AWS Shared Responsibility Model</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        AWS Cloud Practitioner Chronicles - The Infrastructure
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name"></span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-04-28T14:55:00.000Z" class="dt-published" itemprop="datePublished">2023-04-28</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/aws/" rel="tag">aws</a>, <a class="p-category" href="/tags/aws-cloud-practitioner/" rel="tag">aws cloud practitioner</a>, <a class="p-category" href="/tags/cloud-computing/" rel="tag">cloud computing</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p><img src="https://allcode.com/wp-content/uploads/2021/02/Group-169-3.png" alt="AWS" title="AWS"></p>
+<p>To help me stay on track and document my progress during my preparation for AWS Cloud Practitioner certification, I’ve decided to start a blog post series where I will share my experiences. By doing so, I hope to inspire and motivate others who are also interested in cloud computing and create a record of my own growth and development in this field. I’ll be using materials like AWS Skill Builder, Digital Cloud and so on during the preparation.</p>
+<h2 id="The-AWS-Global-Infrastructure"><a href="#The-AWS-Global-Infrastructure" class="headerlink" title="The AWS Global Infrastructure"></a>The AWS Global Infrastructure</h2><p>As of April 2023, AWS has 31 launched regions and 99 availability zones in total. A region normally consists of 3 or more availability zones. Each region is completely independent but the availability zones in a region are connected through low-latency links. We can also replicate data within a region and between regions using private or public internet connections.</p>
+<p>On the other hand, an availability zone is basically a data center facility that is located within a region and each with redundant power, networking, and connectivity, housed in separate facilities. AZs span one or more data centers and have direct, low-latency, high throughput, and redundant network connections between each other.<br>An availability zone is represented by a region code followed by a letter identifier; for example, us-east-1a</p>
+<p><img src="https://d2908q01vomqb2.cloudfront.net/9e6a55b6b4563e652a23be9d623ca5055c356940/2022/03/23/infografi%CC%81a-aws-local-zones-english-map-1080.png" alt="Zones" title="Zones"></p>
+<h3 id="Local-Zones"><a href="#Local-Zones" class="headerlink" title="Local Zones"></a>Local Zones</h3><p>Local zones are extension of an AWS region where they are closer to the end-users. They can place compute, storage and other selected AWS services with high bandwith, secure connection and so on and so forth.</p>
+<p>With local zones, we can easily run highly demanding applications that require single-digit millisecond latencies to our end-users.</p>
+<h3 id="Wavelength-Zones"><a href="#Wavelength-Zones" class="headerlink" title="Wavelength Zones"></a>Wavelength Zones</h3><p>These kind of zones are similar to local zones except they’re for 5G connectivity. They are essentially extensions of existing AWS Regions that are deployed in close proximity to 5G network operators’ data centers.</p>
+<p>By placing compute and storage resources in Wavelength Zones, developers can deliver their applications with single-digit millisecond latencies to end-users. This enables new applications that were not previously possible due to latency issues, such as gaming, augmented and virtual reality, industrial automation, and autonomous vehicles, to name a few.</p>
+<h3 id="Outposts"><a href="#Outposts" class="headerlink" title="Outposts"></a>Outposts</h3><p>AWS outposts is basically a hardware from AWS where we can deploy in our own data center which brings some native AWS services, infrastructure and operating models to virtually any data center. They can also connected to a region for other AWS services as well. </p>
+<h3 id="Cloudfront"><a href="#Cloudfront" class="headerlink" title="Cloudfront"></a>Cloudfront</h3><p>AWS cloudfront is a CDN and its mission is naturally to deliver the static and dynamic content, including websites, APIs, video streams, and other web applications to users. It works by caching content(regional edge cache) at edge locations around the world, which are AWS-managed data centers that are located closer to end-users. </p>
+<p><img src="https://digitalcloud.training/wp-content/uploads/2022/02/aws-cloudfront-edge-cache.png" alt="Cloudfront" title="Cloudfront"></p>
+<p>To give an example, if we’re in Turkey, then when we try to access a video that’s being shared through cloudfront, we’re going to get that video from an edge location that is close to us. This results in better performance.</p>
+<h2 id="The-AWS-Shared-Responsibility-Model"><a href="#The-AWS-Shared-Responsibility-Model" class="headerlink" title="The AWS Shared Responsibility Model"></a>The AWS Shared Responsibility Model</h2><p><img src="https://d1.awsstatic.com/security-center/Shared_Responsibility_Model_V2.59d1eccec334b366627e9295b304202faf7b899b.jpg" alt="Shared Responsibility" title="Shared Responsibility"></p>
+<p>The shared responsibility model is a concept in cloud computing that outlines the responsibilities of both the cloud provider and the customer for securing and managing the cloud environment. This image is from AWS’ website and it clearly specifies the responsibilites.</p>
+<p>The AWS is responsible for the security and maintenance of the underlying cloud infrastructure, while the customer is responsible for securing and managing their own applications, data, and access to the cloud resources they use.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/bbsemih">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-AWS-Global-Infrastructure"><span class="toc-number">1.</span> <span class="toc-text">The AWS Global Infrastructure</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Local-Zones"><span class="toc-number">1.1.</span> <span class="toc-text">Local Zones</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Wavelength-Zones"><span class="toc-number">1.2.</span> <span class="toc-text">Wavelength Zones</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Outposts"><span class="toc-number">1.3.</span> <span class="toc-text">Outposts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cloudfront"><span class="toc-number">1.4.</span> <span class="toc-text">Cloudfront</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-AWS-Shared-Responsibility-Model"><span class="toc-number">2.</span> <span class="toc-text">The AWS Shared Responsibility Model</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&text=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&title=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&is_video=false&description=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=AWS Cloud Practitioner Chronicles - The Infrastructure&body=Check out this article: http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&title=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&title=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&title=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&title=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&name=AWS Cloud Practitioner Chronicles - The Infrastructure&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2023/04/28/AWS-Cloud-Practitioner-Chronicles-The-Infrastructure/&t=AWS Cloud Practitioner Chronicles - The Infrastructure"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2023
+    semih berkay öztürk
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/bbsemih">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
