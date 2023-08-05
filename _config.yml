@@ -109,12 +109,15 @@ pagination_dir: page
 theme: cactus
 
 theme_config:
-  colorscheme: white
+  colorscheme: classic
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/bbsemih/semihb.com
+  branch: [main]
+  message: ['change deployment strategy']
 
 copyright:
   start_year: 2023
