@@ -115,9 +115,8 @@ theme_config:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/bbsemih/semihb.com.git
-  branch: [gh-pages]
-  message: []
+  repo: https://github.com/bbsemih/semihb.com
+  branch: gh-pages
 
 copyright:
   start_year: 2023
