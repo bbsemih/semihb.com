@@ -8,6 +8,9 @@
 !.versionrc.json
 !.stylelintrc.json
 
+public/
+.gitmodules
+
 # bundler cache
 _site
 vendor
