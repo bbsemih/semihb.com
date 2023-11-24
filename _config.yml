@@ -5,7 +5,7 @@
 # Site
 title: semih berkay öztürk
 subtitle: ''
-description: 'a place where i share what i found interesting enough to write'
+description: "hi! i'm sharing what i find interesting"
 keywords:
 language: en
 author: ''
@@ -109,7 +109,7 @@ pagination_dir: page
 theme: cactus
 
 theme_config:
-  colorscheme: classic
+  colorscheme: dark
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
