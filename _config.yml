@@ -5,7 +5,7 @@
 # Site
 title: semih berkay öztürk
 subtitle: ''
-description: "hi! i'm sharing what i find interesting in infra world!"
+description: "i'm sharing what i find interesting enough to write!"
 keywords:
 language: en
 author: ''
@@ -74,10 +74,10 @@ params:
   social:
     -
       icon: github
-      link: http://github.com/bbsemih
+      link: http://github.com/semioz
     -
       icon: twitter
-      link: https://twitter.com/bbsemihh
+      link: https://twitter.com/semiozz
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
@@ -115,7 +115,7 @@ theme_config:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/bbsemih/semihb.com
+  repo: https://github.com/semioz/semihb.com
   branch: gh-pages
 
 copyright:
